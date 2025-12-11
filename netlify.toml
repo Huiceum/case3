@@ -1,0 +1,9 @@
+[[headers]]
+  # 套用到所有頁面
+  for = "/*"
+  [headers.values]
+    # 允許 Canva 嵌入
+    Content-Security-Policy = "frame-ancestors 'self' https://www.canva.com;"
+    # 確保移除舊的保護機制 (如果有的話)
+    X-Frame-Options = "ALLOW-FROM https://www.canva.com"
+    
